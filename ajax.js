@@ -36,5 +36,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }).done(function (responseData) {
       console.log(responseData);
     });
-  });
+    });
+      var button4 = document.getElementById("button4")
+      button4.addEventListener('click', function() {
+      var request = $.ajax ({
+      url: 'http://first-ajax-api.herokuapp.com/time',
+      method: 'GET',
+      data: {food: 'pancakes', quantity: 6, type: 'blueberry'},
+      dataType: 'text'
+    }).done(function (responseData) {
+      console.log(responseData);
+    });
+    });
   });
