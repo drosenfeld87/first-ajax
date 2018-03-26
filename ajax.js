@@ -48,4 +48,14 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(responseData);
     });
     });
+    var button5 = document.getElementById("button5")
+    button5.addEventListener('click', function() {
+    var request = $.ajax ({
+    url: 'http://first-ajax-api.herokuapp.com/a_car',
+    method: 'GET',
+    dataType: 'html'
+  }).done(function (responseData) {
+    console.log(responseData);
   });
+  });
+});
